@@ -1,38 +1,60 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
+  background-color: #3d2285;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background-color: #070b24;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* * {
+  background-color: #070b24;
+} */
+
+.renk {
+  background-color: #070b24;
+}
+
+@keyframes underline {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.underline {
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #000; /* Çizgi rengi */
+  transform-origin: left;
+  animation: underline 0.2s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.butonYaziRengi {
+  color: #8942c1;
+}
+
+.butonYaziRengi2 {
+  background-color: #3d2285;
+}
+
+.renk2 {
+  background-color: #05081a;
+}
+
+.renk3 {
+  color: #2c36bd;
 }
